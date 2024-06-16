@@ -26,6 +26,24 @@ fs.writeFile(filePath, fileContent, (err) => {
   console.log("File written successfully");
 });
 
+fs.writeFile(
+  path.join("/Users/Ido Sabach/Desktop/FullStack/learn node again", "test.txt"),
+  "Hello World",
+  (err) => {
+    if (err) return err;
+    console.log("test work!");
+  }
+);
+
+fs.readFile(
+  path.join("/Users/Ido Sabach/Desktop/FullStack/learn node again", "test.txt"),
+  "utf-8",
+  (err, data) => {
+    if (err) return err;
+    console.log(data);
+  }
+);
+
 fs.readFile(filePath, "utf-8", (err, data) => {
   if (err) {
     console.log(err);
